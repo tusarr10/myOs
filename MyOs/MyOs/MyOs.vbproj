@@ -53,7 +53,10 @@
     <Reference Include="DevExpress.Sparkline.v20.1.Core" />
     <Reference Include="DevExpress.XtraEditors.v20.1" />
     <Reference Include="DevExpress.Printing.v20.1.Core" />
+    <Reference Include="DevExpress.XtraGrid.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraNavBar.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraWizard.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -63,6 +66,7 @@
     <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
     <Reference Include="System.Security" />
     <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -84,6 +88,49 @@
     <Import Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\newuser_cls.vb" />
+    <Compile Include="Control\DetailsView.Designer.vb">
+      <DependentUpon>DetailsView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Control\DetailsView.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Emplyee\usercontrol\AllUser.Designer.vb">
+      <DependentUpon>AllUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Emplyee\usercontrol\AllUser.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Emplyee\forms\Alluserfrm.Designer.vb">
+      <DependentUpon>Alluserfrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Emplyee\forms\Alluserfrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Emplyee\mainform.Designer.vb">
+      <DependentUpon>mainform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Emplyee\mainform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Emplyee\usercontrol\newuserlist.Designer.vb">
+      <DependentUpon>newuserlist.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Emplyee\usercontrol\newuserlist.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Emplyee\usercontrol\newuserview.Designer.vb">
+      <DependentUpon>newuserview.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Emplyee\usercontrol\newuserview.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Emplyee\usercontrol\XtraForm1.Designer.vb">
+      <DependentUpon>XtraForm1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Emplyee\usercontrol\XtraForm1.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="parrentfrm.Designer.vb">
       <DependentUpon>parrentfrm.vb</DependentUpon>
     </Compile>
@@ -108,6 +155,27 @@
     <Compile Include="Settingsetup.vb">
       <SubType>Form</SubType>
     </Compile>
+    <EmbeddedResource Include="Control\DetailsView.resx">
+      <DependentUpon>DetailsView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Emplyee\usercontrol\AllUser.resx">
+      <DependentUpon>AllUser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Emplyee\forms\Alluserfrm.resx">
+      <DependentUpon>Alluserfrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Emplyee\mainform.resx">
+      <DependentUpon>mainform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Emplyee\usercontrol\newuserlist.resx">
+      <DependentUpon>newuserlist.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Emplyee\usercontrol\newuserview.resx">
+      <DependentUpon>newuserview.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Emplyee\usercontrol\XtraForm1.resx">
+      <DependentUpon>XtraForm1.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="parrentfrm.resx">
       <DependentUpon>parrentfrm.vb</DependentUpon>
     </EmbeddedResource>
@@ -149,7 +217,7 @@
   <ItemGroup>
     <Folder Include="admin\" />
     <Folder Include="advance\" />
-    <Folder Include="Emplyee\" />
+    <Folder Include="controlviewclass\" />
     <Folder Include="superuser\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
